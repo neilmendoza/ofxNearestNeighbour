@@ -4,7 +4,7 @@ A templated k-d tree nearest neighbour search addon for openFrameworks based on 
 
 ## Features
 
-Search for n closest nearest neighbours of neighbours within a certain radius in 2D or 3D.
+Search for n closest nearest neighbours or neighbours within a certain radius in 2D or 3D.
 
 ## Usage
 
