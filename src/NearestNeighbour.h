@@ -55,7 +55,8 @@ namespace itg
         void buildIndex(const vector<T>& points)
         {
             cloud.points = points;
-            kdTree.buildIndex();
+            if (points.empty()) ofLogError() << "Cannot build index with no points.";
+            else kdTree.buildIndex();
         }
         
         void findNClosestPoints(const T& point, unsigned n, vector<size_t>& indices, vector<float>& distsSquared)
