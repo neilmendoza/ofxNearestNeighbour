@@ -858,7 +858,7 @@ namespace nanoflann
 			m_leaf_max_size = params.leaf_max_size;
 
 			// Create a permutable array of indices to the input vectors.
-			init_vind();
+			//init_vind();
 		}
 
 		/**
