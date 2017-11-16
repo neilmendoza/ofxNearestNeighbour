@@ -45,7 +45,7 @@ namespace itg
         inline float kdtree_distance(const float* p1, const size_t idx_p2, size_t size) const
         {
             float total = 0;
-            for (unsigned i = 0; i < T::DIM; ++i)
+            for (unsigned i = 0; i < T::length(); ++i)
             {
                 const float d = p1[i] - points[idx_p2][i];
                 total += d * d;

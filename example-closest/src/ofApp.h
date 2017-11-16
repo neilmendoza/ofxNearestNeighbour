@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "ofxNearestNeighbour.h"
 
-class testApp : public ofBaseApp
+class ofApp : public ofBaseApp
 {
 public:
     void setup();
@@ -22,6 +22,6 @@ public:
     
 private:
     ofxNearestNeighbour2D nn;
-    vector<ofVec2f> points;
-    vector<pair<NNIndex, float> > indices;
+    vector<glm::vec2> points;
+    vector<NNIndex> indices;
 };

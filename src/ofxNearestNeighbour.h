@@ -33,6 +33,6 @@
 
 #include "NearestNeighbour.h"
 
-typedef itg::NearestNeighbour<ofVec3f> ofxNearestNeighbour3D;
-typedef itg::NearestNeighbour<ofVec2f> ofxNearestNeighbour2D;
+typedef itg::NearestNeighbour<glm::vec3, 3> ofxNearestNeighbour3D;
+typedef itg::NearestNeighbour<glm::vec2, 2> ofxNearestNeighbour2D;
 typedef size_t NNIndex;

@@ -1,7 +1,7 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup()
+void ofApp::setup()
 {
     const unsigned numPoints = 10000;
     ofBackground(0);
@@ -14,7 +14,7 @@ void testApp::setup()
 }
 
 //--------------------------------------------------------------
-void testApp::update()
+void ofApp::update()
 {
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 2));
     ofVec2f mouse(ofGetMouseX(), ofGetMouseY());
@@ -22,63 +22,63 @@ void testApp::update()
 }
 
 //--------------------------------------------------------------
-void testApp::draw()
+void ofApp::draw()
 {
     ofSetColor(255, 0, 0);
     for (unsigned i = 0; i < points.size(); ++i)
     {
-        ofCircle(points[i], 2);
+        ofDrawCircle(points[i], 2);
     }
     ofSetColor(0, 255, 0);
     for (unsigned i = 0; i < indices.size(); ++i)
     {
-        ofCircle(points[indices[i].first], 2);
+        ofDrawCircle(points[indices[i].first], 2);
     }
     ofSetColor(255);
     ofDrawBitmapString("Move mouse to find nearest neighbours", 10, 20);
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void ofApp::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void ofApp::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
+void ofApp::mouseMoved(int x, int y ){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
+void ofApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void testApp::gotMessage(ofMessage msg){
+void ofApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }

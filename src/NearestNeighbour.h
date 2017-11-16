@@ -39,16 +39,16 @@ namespace itg
     using namespace nanoflann;
     
     // T is type of nn point
-    template<class T>
+    template<class T, unsigned U>
     class NearestNeighbour
     {
     public:
         typedef KDTreeSingleIndexAdaptor<
-        L2_Simple_Adaptor<float, PointCloud<T> > ,
-        PointCloud<T>,
-        T::DIM> KdTree;
+                L2_Simple_Adaptor<float, PointCloud<T>>,
+                PointCloud<T>,
+                U> KdTree;
         
-        NearestNeighbour() : kdTree(T::DIM, cloud, KDTreeSingleIndexAdaptorParams(10 /* max leaf */))
+        NearestNeighbour() : kdTree(U, cloud, KDTreeSingleIndexAdaptorParams(10 /* max leaf */))
         {
         }
         
@@ -63,13 +63,13 @@ namespace itg
         {
             indices.resize(n);
             distsSquared.resize(n);
-            kdTree.knnSearch(point.getPtr(), n, &indices[0], &distsSquared[0]);
+            kdTree.knnSearch(glm::value_ptr(point), n, &indices[0], &distsSquared[0]);
         }
         
         unsigned findPointsWithinRadius(const T& point, float radius, vector<pair<size_t, float> >& matches)
         {
             nanoflann::SearchParams params;
-            return kdTree.radiusSearch(point.getPtr(), radius * radius, matches, params);
+            return kdTree.radiusSearch(glm::value_ptr(point), radius * radius, matches, params);
         }
         
     private:
