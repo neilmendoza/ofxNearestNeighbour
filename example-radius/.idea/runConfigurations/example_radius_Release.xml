@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="example-radius Release" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="example-radius" TARGET_NAME="example-radius" CONFIG_NAME="Release" SCHEME_NAME="example-radius Release" RUN_TARGET_PROJECT_NAME="example-radius" RUN_TARGET_NAME="example-radius" MAKE_ACTIVE="TRUE">
-    <envs />
-    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-      <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-    </EXTENSION>
-    <method />
-  </configuration>
-</component>

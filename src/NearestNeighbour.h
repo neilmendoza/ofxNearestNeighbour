@@ -34,7 +34,7 @@
 #include "nanoflann.hpp"
 #include "PointCloud.h"
 
-namespace itg
+namespace nm
 {
     using namespace nanoflann;
     
